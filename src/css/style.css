@@ -1,0 +1,188 @@
+body {
+    background-color: #000;
+}
+
+body::before {
+    content: "";
+    background: url("../assets/bg-image.jpg") center no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: blur(8px);
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+main .cards {
+    width: 320px;
+    height: 490px;
+    position: relative;
+}
+
+main .card {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    padding: 15px;
+    max-width: 320px;
+    border: 7px solid rgba(15, 20, 25, 1);
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    height: 100%;
+    width: 100%;
+}
+
+main .card.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+main .card#summoned-skull {
+    background: url("../assets/bg-image-sumoned-skull.jpg") center no-repeat;
+    background-size: cover;
+}
+
+main .card#dark-magician {
+    background: url("../assets/bg-image-dark-magician.jpg") center no-repeat;
+    background-size: cover;
+}
+
+main .card#blue-eyes-white-dragon {
+    background: url("../assets/bg-image-blue-eyes-white-dragon.jpg") center no-repeat;
+    background-size: cover;
+}
+
+main .card#red-eyes-black-dragon {
+    background: url("../assets/bg-image-red-eyes-black-dragon.jpg") center no-repeat;
+    background-size: cover;
+}
+
+main .card#slifer-the-sky-dragon {
+    background: url("../assets/bg-image-slifer-the-sky-dragon.jpg") center no-repeat;
+    background-size: cover;
+}
+
+main .card#celtic-guardian {
+    background: url("../assets/bg-image-celtic-guardian.jpg") center no-repeat;
+    background-size: cover;
+}
+
+main .card .card-header {
+    padding: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left: 2px solid  rgba(255, 255, 255, 0.3);
+    border-top: 2px solid  rgba(255, 255, 255, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.7) 3px 3px 3px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+}
+
+main .card .card-header h1 {
+    font-family: 'Matrix Regular', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+main .card .card-header img {
+    height: 23px;
+}
+
+main .card .stars-level {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2px;
+}
+
+main .card .stars-level li img{
+    height: 20px;
+}
+
+main .card .monster-image {
+    height: 270px;
+    width: 100%;
+}
+
+main .card .card-infos {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+main .card .card-infos .general-infos {
+    min-height: calc(106px - 17px);
+    border-bottom: 1px solid;
+    padding-bottom: 3px;
+}
+
+main .card .card-infos .general-infos .title-type {
+    font-family: 'Stone Serif Bold', sans-serif;
+    font-size: 14px;
+}
+
+main .card .card-infos .general-infos .description {
+    font-family: 'Stone Serif Italic', sans-serif;
+    font-size: 12px;
+}
+
+main .card .card-infos .stats-info {
+    font-family: 'Stone Serif Bold', sans-serif;
+    font-size: 12px;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+}
+
+main #back-arrow,
+main #advance-arrow {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+main #back-arrow {
+    transform: rotate(180deg);
+}
+
+main #back-arrow:hover,
+main #advance-arrow:hover {
+    background-color: #293056;
+}
+
+main #back-arrow.opacity:hover,
+main #advance-arrow.opacity:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+main #back-arrow.opacity,
+main #advance-arrow.opacity {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+main .buttons-mobile {
+    display: none;
+}
+
+main .buttons-mobile #back-arrow:hover,
+main .buttons-mobile #advance-arrow:hover {
+    background-color: #FFF;
+}

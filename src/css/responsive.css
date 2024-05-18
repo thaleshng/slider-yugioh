@@ -1,0 +1,27 @@
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+    
+    main #back-arrow,
+    main #advance-arrow {
+        display: none;
+    }
+
+    main .buttons-mobile {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    main .buttons-mobile #back-arrow,
+    main .buttons-mobile #advance-arrow {
+        display: block;
+    }
+}
+
+@media (max-width: 320px) {
+    main .cards {
+        width: 300px;
+    }
+}

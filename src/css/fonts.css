@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Matrix Regular';
+    src: url('../fonts/matrix-regular.ttf'); 
+}
+
+@font-face {
+    font-family: 'Stone Serif Bold';
+    src: url('../fonts/stone-serif-bold.ttf'); 
+}
+
+@font-face {
+    font-family: 'Stone Serif Italic';
+    src: url('../fonts/stone-serif-italic.ttf'); 
+}
