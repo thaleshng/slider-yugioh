@@ -5,49 +5,49 @@ const btnAvancarMobile = document.querySelector(".mobile-advance-arrow")
 const btnVoltarMobile = document.querySelector(".mobile-back-arrow")
 
 const cards = document.querySelectorAll(".card")
-let actualImage = 0
+let actualCard = 0
 
-function advanceCard () {
-    if (actualImage === cards.length - 1) {
+function advanceCard() {
+    if (actualCard === cards.length - 1) {
         return
     }
 
     const cardActive = document.querySelector(".show")
     cardActive.classList.remove("show")
 
-    actualImage++
+    actualCard++
 
-    cards[actualImage].classList.add("show")
+    cards[actualCard].classList.add("show")
 
-    if (actualImage !== 0) {
+    if (actualCard !== 0) {
         btnVoltar.classList.remove("opacity")
         btnVoltarMobile.classList.remove("opacity")
     }
 
-    if (actualImage === cards.length - 1) {
+    if (actualCard === cards.length - 1) {
         btnAvancar.classList.add("opacity")
         btnAvancarMobile.classList.add("opacity")
     }
 }
 
-function backCard () {
-    if (actualImage === 0) {
+function backCard() {
+    if (actualCard === 0) {
         return
     }
 
     const cardActive = document.querySelector(".show")
     cardActive.classList.remove("show")
 
-    actualImage--
+    actualCard--
 
-    cards[actualImage].classList.add("show")
+    cards[actualCard].classList.add("show")
 
-    if (actualImage === 0) {
+    if (actualCard === 0) {
         btnVoltar.classList.add("opacity")
         btnVoltarMobile.classList.add("opacity")
     }
 
-    if (actualImage !== cards.length - 1) {
+    if (actualCard !== cards.length - 1) {
         btnAvancar.classList.remove("opacity")
         btnAvancarMobile.classList.remove("opacity")
     }
